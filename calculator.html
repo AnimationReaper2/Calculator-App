@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
         <link rel = "stylesheet" href="style.css">
-        <script type="text/javascript" src="code.js"></script>
         <title>  
             Calculator
         </title> 
@@ -11,32 +10,32 @@
 </html>
 
 <body>
-    <div class="title">
-        Calculator
-    </div>
-    <div class="container">
-        <div class="calc">
-            <div class="calc_display">0</div>
-            <div class="calculator__keys">
-                <button class="key--operator" data-action="add">+</button>
-                <button class="key--operator" data-action="subtract">-</button>
-                <button class="key--operator" data-action="multiply">&times;</button>
-                <button class="key--operator" data-action="divide">÷</button>
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button>4</button>
-                <button>5</button>
-                <button>6</button>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>0</button>
-                <button data-action="decimal">.</button>
-                <button data-action="clear">AC</button>
-                <button class="key--equal" data-action="calculate">=</button>
-              </div>
+    <section>
+        <div class="container">
+            <div id="display"></div>
+            <div class="buttons">
+                <div class="button">C</div>
+                <div class="button">/</div>
+                <div class="button">*</div>
+                <div class="button">&larr;</div>
+                <div class="button">7</div>
+                <div class="button">8</div>
+                <div class="button">9</div>
+                <div class="button">-</div>
+                <div class="button">4</div>
+                <div class="button">5</div>
+                <div class="button">6</div>
+                <div class="button">+</div>
+                <div class="button">1</div>
+                <div class="button">2</div>
+                <div class="button">3</div>
+                <div class="button">.</div>
+                <div class="button">(</div>
+                <div class="button">0</div>
+                <div class="button">)</div>
+                <div id="equal" class="button">=</div>
+             </div>
         </div>
-    </div>
-    
+    </section>
+    <script src="code.js"></script>
 </body>
