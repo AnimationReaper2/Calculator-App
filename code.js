@@ -123,3 +123,5 @@ function calculate(firstVa, secondVa, operator){
     }
     return secondVa;
 }
+
+//keyboard input
