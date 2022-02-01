@@ -32,19 +32,19 @@ keys.addEventListener('click', (event) => {
         case '*':
         case '/':
         case '=':
-        operators(value);
-        break;
+            operators(value);
+            break;
         case '.':
-        inputDecimal(value);
-        break;
+            inputDecimal(value);
+            break;
         case 'all-clear':
-        reset();
-        break;
+            reset();
+            break;
         default:
-        // check if the key is an integer
-        if (Number.isInteger(parseFloat(value))) {
-            inputData(value);
-        }
+            // check if the key is an integer
+            if (Number.isInteger(parseFloat(value))) {
+                inputData(value);
+            }
     }
 
     updateDisplay();
@@ -123,5 +123,5 @@ function calculate(firstVa, secondVa, operator){
     }
     return secondVa;
 }
-
+//percent, negPos
 //keyboard input
