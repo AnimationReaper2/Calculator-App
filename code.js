@@ -40,6 +40,9 @@ keys.addEventListener('click', (event) => {
         case 'all-clear':
             reset();
             break;
+        case '%':
+            percentage(value);
+            break;
         default:
             // check if the key is an integer
             if (Number.isInteger(parseFloat(value))) {
@@ -97,7 +100,7 @@ function operators(nextOp){
         calc.operator = nextOp;
         return;
     }
-    if(firstOp === null && !isNaN(input)){
+    if(firstOp === null){
         //update firstOp
         calc.firstOp = input;
     } else if(operator) {
@@ -123,5 +126,11 @@ function calculate(firstVa, secondVa, operator){
     }
     return secondVa;
 }
+
 //percent, negPos
+function percentage(num){
+    const per = num / 100;
+    calc.displayValue = per;
+}
+
 //keyboard input
