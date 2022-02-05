@@ -43,6 +43,9 @@ keys.addEventListener('click', (event) => {
         case '%':
             percentage(value);
             break;
+        case '±':
+            minPos(value);
+            break;
         default:
             // check if the key is an integer
             if (Number.isInteger(parseFloat(value))) {
@@ -81,6 +84,15 @@ function inputDecimal(dot){
     }
 }
 
+//input minus and plus
+function minPos(sign){
+    if(!calc.displayValue.includes(sign)){
+        var c = calc.displayValue;
+        c *= -1;
+        calc.displayValue = c;
+    }
+}
+
 //reset 
 function reset(){
     calc.displayValue = '0';
@@ -100,7 +112,7 @@ function operators(nextOp){
         calc.operator = nextOp;
         return;
     }
-    if(firstOp === null){
+    if(firstOp === null && !isNaN(input)){
         //update firstOp
         calc.firstOp = input;
     } else if(operator) {
@@ -128,9 +140,10 @@ function calculate(firstVa, secondVa, operator){
 }
 
 //percent, negPos
-function percentage(num){
-    const per = num / 100;
-    calc.displayValue = per;
+function percentage(per){
+    var y = calc.displayValue;
+    var t = y / 100;
+    calc.displayValue = t;
 }
 
 //keyboard input
