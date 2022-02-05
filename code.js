@@ -147,3 +147,6 @@ function percentage(per){
 }
 
 //keyboard input
+//I've been trying to get the keyboard function to work for the last week and I couldn't get it to work
+//I've watched videos on it and I've tried different ways but couldn't get it to work...
+//Also the first time I put the numbers in it shows up with NaN, but the second time it gives me the amount, not sure why...
